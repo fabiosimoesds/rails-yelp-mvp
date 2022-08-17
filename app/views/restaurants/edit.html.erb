@@ -1,0 +1,9 @@
+<h1>Edit <%=@restaurant.name%></h1>
+
+<%= simple_form_for(@restaurant) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :phone_number, label: 'Phone Number', placeholder: '0000 00000' %>
+  <%= f.select :category, Restaurant::CATEGORY_LIST %>
+  <%= f.button :submit %>
+<% end %>
